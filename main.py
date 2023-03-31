@@ -1,5 +1,3 @@
-import tkinter.font
-
 import requests
 from tkinter import *
 
@@ -19,7 +17,6 @@ def get_quote():
     canvas.itemconfig(author_name, text=f"-{new_author}")
 
 
-
 window = Tk()
 window.title("Spiritual Quotes")
 window.config(padx=50, pady=50)
@@ -34,10 +31,5 @@ author_name = canvas.create_text(150, 300, text=f"-{author}", width=250, font=("
 lotus_img = PhotoImage(file="lotus_img.png")
 lotus_btn = Button(image=lotus_img, highlightthickness=0, height=100, width=100, command=get_quote)
 lotus_btn.grid(column=0, row=1)
-print(tkinter.font.families())
-
-
 
 window.mainloop()
-
-
